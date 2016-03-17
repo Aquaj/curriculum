@@ -47,10 +47,14 @@
   }
 }
 
-.skill-list{
+.items{
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.skill-list{
   padding: 0 15px 75px;
   width: 75%;
   margin: 0 auto;
@@ -59,6 +63,8 @@
 
   .category{
     width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
 
   .trigger{
@@ -118,12 +124,27 @@
     align-items: center;
     font-size: 15px;
     width: 100%;
+    flex-wrap: wrap;
 
     .language{
       width: 300px;
       height: 300px;
       background-color: white;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      p{
+        margin-bottom: 15px;
+      }
     }
   }
 }
