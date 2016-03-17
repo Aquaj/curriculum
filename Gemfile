@@ -14,5 +14,4 @@ gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
 gem 'puma'
 gem 'rack-contrib'
-gem "bootstrap-sass"
 gem "jquery-middleman"
