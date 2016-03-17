@@ -8,7 +8,7 @@ $(document).ready(function(doc){
       $(this).parent().css('display', 'none'); // Hiding all categories
     });
     $(this).one('transitionend', function () {
-        $("."+this.id+" .languages").toggleClass("hidden");
+        $("."+this.id+"> .items").toggleClass("hidden");
         $(this).parent().css('display', ''); // Re-displaying the one we're in.
     });
   });

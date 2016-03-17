@@ -41,23 +41,29 @@
     font-size: 36px; }
 
 /* line 50, index.scss */
-.skill-list {
+.items {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; }
+
+/* line 57, index.scss */
+.skill-list {
   padding: 0 15px 75px;
   width: 75%;
   margin: 0 auto;
   font-size: 15px; }
-  /* line 60, index.scss */
-  .skill-list .category {
-    width: 100%; }
   /* line 64, index.scss */
+  .skill-list .category {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; }
+  /* line 70, index.scss */
   .skill-list .trigger {
     transition-property: opacity;
     transition-duration: 0.5s;
     transition-timing-function: ease-out; }
-  /* line 70, index.scss */
+  /* line 76, index.scss */
   .skill-list a {
     width: 300px;
     height: 300px;
@@ -66,49 +72,62 @@
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    /* line 80, index.scss */
+    /* line 86, index.scss */
     .skill-list a:hover, .skill-list a:focus, .skill-list a:active {
       text-decoration: none; }
-    /* line 84, index.scss */
+    /* line 90, index.scss */
     .skill-list a p {
       font-size: 25px; }
-    /* line 88, index.scss */
+    /* line 94, index.scss */
     .skill-list a .icons {
       position: relative; }
-      /* line 92, index.scss */
+      /* line 98, index.scss */
       .skill-list a .icons .fa.fa-desktop {
         font-size: 150px; }
-      /* line 95, index.scss */
+      /* line 101, index.scss */
       .skill-list a .icons .fa.fa-terminal {
         position: absolute;
         font-size: 25px;
         top: 55px;
         left: 90px; }
-      /* line 101, index.scss */
+      /* line 107, index.scss */
       .skill-list a .icons .fa.fa-globe {
         font-size: 150px; }
-      /* line 104, index.scss */
+      /* line 110, index.scss */
       .skill-list a .icons .fa.fa-code {
         text-shadow: 2px 0 3px #fff, -2px 0 3px #fff, 0 2px 3px #fff, 0 -2px 3px #fff, 1px 1px #fff, -1px -1px 3px #fff, 1px -1px 3px #fff, -1px 1px 3px #fff;
         position: absolute;
         font-size: 75px;
         top: 35px;
         left: 110px; }
-  /* line 115, index.scss */
+  /* line 121, index.scss */
   .skill-list .languages {
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 15px;
-    width: 100%; }
-    /* line 122, index.scss */
+    width: 100%;
+    flex-wrap: wrap; }
+    /* line 129, index.scss */
     .skill-list .languages .language {
       width: 300px;
       height: 300px;
       background-color: white;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+      /* line 139, index.scss */
+      .skill-list .languages .language img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover; }
+      /* line 145, index.scss */
+      .skill-list .languages .language p {
+        margin-bottom: 15px; }
 
-/* line 131, index.scss */
+/* line 152, index.scss */
 .history {
   height: 200px;
   background-color: #23527C; }
