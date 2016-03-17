@@ -45,12 +45,8 @@ $(document).ready(function(doc){
     .last()
     .toggleClass("hidden");
 
- //   $($(".items:not(.hidden)")[1])
-   // .css('opacity', 0)
- //   .one('transitionend', function () {
-   //   $(this).parent().css('display', 'none'); // Hiding all categories
-  //  });
-
-    $($(".items:not(.hidden)")[1]).parent(".items");
+    if($(".items:not(.hidden)").length == 1){
+      $(this).toggleClass("hidden");
+    };
   });
 });

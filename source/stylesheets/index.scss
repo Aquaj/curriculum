@@ -2,6 +2,12 @@
   display: none;
 }
 
+* {
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
 .header{
   background-color: #23527C;
   padding: 20px;
@@ -29,7 +35,7 @@
   }
 
   img {
-    object-fit: scale-down;
+    object-fit: cover;
     border-radius: 50em;
   }
 }
@@ -49,7 +55,7 @@
 
     i {
       position: absolute;
-      left: -10px;
+      left: 15px;
     }
   }
 }
