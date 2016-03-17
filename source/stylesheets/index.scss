@@ -29,7 +29,7 @@
   }
 
   img {
-    object-fit: cover;
+    object-fit: scale-down;
     border-radius: 50em;
   }
 }
@@ -44,6 +44,13 @@
   p {
     padding-top: 25px;
     font-size: 36px;
+    position: relative;
+    text-anchor: middle;
+
+    i {
+      position: absolute;
+      left: -10px;
+    }
   }
 }
 
@@ -52,6 +59,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .skill-list{
@@ -70,7 +80,7 @@
   .trigger{
     transition-property: opacity;
     transition-duration: 0.5s;
-    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
   }
 
   a {
@@ -95,6 +105,16 @@
       position: relative;
 
       .fa {
+        &.fa-indent{
+          text-shadow: 2px 0 3px #fff, -2px 0 3px #fff, 0 2px 3px #fff, 0 -2px 3px #fff, 1px 1px #fff, -1px -1px 3px #fff, 1px -1px 3px #fff, -1px 1px 3px #fff;
+          position: absolute;
+          font-size: 80px;
+          top: 10px;
+          left: 110px;
+        }
+        &.fa-database{
+          font-size: 150px;
+        }
         &.fa-desktop{
           font-size: 150px;
         }
@@ -139,7 +159,7 @@
       img{
         width: 200px;
         height: 200px;
-        object-fit: cover;
+        object-fit: scale-down;
       }
 
       p{
