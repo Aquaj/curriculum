@@ -368,51 +368,86 @@ table {
     text-align: left; }
     /* line 21, index.scss */
     .header .text h1 {
-      font-size: 4em; }
-    /* line 25, index.scss */
+      font-size: 6em;
+      color: rgba(255, 255, 255, 0.8); }
+    /* line 26, index.scss */
     .header .text p {
-      font-size: 2em;
-      margin-left: 50px; }
-  /* line 31, index.scss */
-  .header img {
-    object-fit: cover;
-    border-radius: 50em; }
+      font-size: 4em;
+      margin-left: 50px;
+      color: rgba(255, 255, 255, 0.5); }
+  /* line 33, index.scss */
+  .header .profile {
+    display: flex; }
+    /* line 35, index.scss */
+    .header .profile img {
+      object-fit: cover;
+      border-radius: 3px; }
+    /* line 39, index.scss */
+    .header .profile .contact {
+      display: flex;
+      font-size: 15px;
+      color: white;
+      padding: 15px; }
+      /* line 45, index.scss */
+      .header .profile .contact .contact-items {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around; }
+      /* line 51, index.scss */
+      .header .profile .contact .contact-info {
+        margin-right: -500px;
+        text-align: left;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around; }
 
-/* line 37, index.scss */
+/* line 64, index.scss */
 .skills {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  /* line 44, index.scss */
+  /* line 70, index.scss */
   .skills p {
     padding-top: 25px;
-    font-size: 36px; }
+    font-size: 36px;
+    position: relative;
+    text-anchor: middle; }
+    /* line 76, index.scss */
+    .skills p i {
+      position: absolute;
+      left: 15px; }
 
-/* line 50, index.scss */
+/* line 83, index.scss */
 .items {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  transition-property: opacity;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out; }
 
-/* line 57, index.scss */
+/* line 93, index.scss */
 .skill-list {
   padding: 0 15px 75px;
   width: 75%;
   margin: 0 auto;
   font-size: 15px; }
-  /* line 64, index.scss */
+  /* line 100, index.scss */
   .skill-list .category {
     width: 100%;
     display: flex;
     justify-content: space-around; }
-  /* line 70, index.scss */
+  /* line 106, index.scss */
   .skill-list .trigger {
     transition-property: opacity;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out; }
-  /* line 76, index.scss */
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out; }
+  /* line 112, index.scss */
   .skill-list a {
     width: 300px;
     height: 300px;
@@ -421,35 +456,45 @@ table {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    /* line 86, index.scss */
+    /* line 122, index.scss */
     .skill-list a:hover, .skill-list a:focus, .skill-list a:active {
       text-decoration: none; }
-    /* line 90, index.scss */
+    /* line 126, index.scss */
     .skill-list a p {
       font-size: 25px; }
-    /* line 94, index.scss */
+    /* line 130, index.scss */
     .skill-list a .icons {
       position: relative; }
-      /* line 98, index.scss */
+      /* line 134, index.scss */
+      .skill-list a .icons .fa.fa-indent {
+        text-shadow: 2px 0 3px #fff, -2px 0 3px #fff, 0 2px 3px #fff, 0 -2px 3px #fff, 1px 1px #fff, -1px -1px 3px #fff, 1px -1px 3px #fff, -1px 1px 3px #fff;
+        position: absolute;
+        font-size: 80px;
+        top: 10px;
+        left: 110px; }
+      /* line 141, index.scss */
+      .skill-list a .icons .fa.fa-database {
+        font-size: 150px; }
+      /* line 144, index.scss */
       .skill-list a .icons .fa.fa-desktop {
         font-size: 150px; }
-      /* line 101, index.scss */
+      /* line 147, index.scss */
       .skill-list a .icons .fa.fa-terminal {
         position: absolute;
         font-size: 25px;
         top: 55px;
         left: 90px; }
-      /* line 107, index.scss */
+      /* line 153, index.scss */
       .skill-list a .icons .fa.fa-globe {
         font-size: 150px; }
-      /* line 110, index.scss */
+      /* line 156, index.scss */
       .skill-list a .icons .fa.fa-code {
         text-shadow: 2px 0 3px #fff, -2px 0 3px #fff, 0 2px 3px #fff, 0 -2px 3px #fff, 1px 1px #fff, -1px -1px 3px #fff, 1px -1px 3px #fff, -1px 1px 3px #fff;
         position: absolute;
         font-size: 75px;
         top: 35px;
         left: 110px; }
-  /* line 121, index.scss */
+  /* line 167, index.scss */
   .skill-list .languages {
     display: flex;
     justify-content: space-around;
@@ -457,7 +502,7 @@ table {
     font-size: 15px;
     width: 100%;
     flex-wrap: wrap; }
-    /* line 129, index.scss */
+    /* line 175, index.scss */
     .skill-list .languages .language {
       width: 300px;
       height: 300px;
@@ -467,19 +512,34 @@ table {
       flex-direction: column;
       align-items: center;
       justify-content: space-between; }
-      /* line 139, index.scss */
+      /* line 185, index.scss */
       .skill-list .languages .language img {
         width: 200px;
         height: 200px;
-        object-fit: cover; }
-      /* line 145, index.scss */
+        object-fit: scale-down; }
+      /* line 191, index.scss */
       .skill-list .languages .language p {
         margin-bottom: 15px; }
 
-/* line 152, index.scss */
+/* line 198, index.scss */
 .history {
   height: 200px;
-  background-color: #23527C; }
+  background-color: #23527C;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: center; }
+  /* line 206, index.scss */
+  .history p {
+    color: white;
+    font-size: 32px; }
+  /* line 211, index.scss */
+  .history a {
+    color: rgba(255, 255, 255, 0.5); }
+    /* line 213, index.scss */
+    .history a:hover {
+      color: rgba(255, 255, 255, 0.3);
+      text-decoration: none; }
 
 /* line 5, site.css.scss */
 body {
