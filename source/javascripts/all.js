@@ -8,7 +8,7 @@ $(document).ready(function(doc){
       $(this).parent().css('display', 'none'); // Hiding all categories
     });
     $(this).one('transitionend', function () {
-        $('.fa-chevron-left').removeClass("hidden");
+        $('.back-link').removeClass("hidden");
         $("."+this.id+"> .items")
         .css("opacity", 0)
         .toggleClass("hidden") // Hiding all categories
@@ -46,7 +46,7 @@ $(document).ready(function(doc){
     .toggleClass("hidden");
 
     if($(".items:not(.hidden)").length == 1){
-      $(this).toggleClass("hidden");
+      $(this).addClass("hidden");
     };
   });
 });

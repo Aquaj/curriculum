@@ -2,12 +2,6 @@
   display: none;
 }
 
-* {
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-}
-
 .header{
   background-color: #23527C;
   padding: 20px;
@@ -34,15 +28,39 @@
     }
   }
 
-  img {
-    object-fit: cover;
-    border-radius: 50em;
+  .profile{
+    display: flex;
+    img {
+      object-fit: cover;
+      border-radius: 3px;
+    }
+    .contact{
+      display: flex;
+      font-size: 15px;
+      color: white;
+      padding: 15px;
+
+      .contact-items{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+      }
+      .contact-info{
+        margin-right: -500px;
+        text-align: left;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+      }
+    }
   }
 }
 
 .skills{
   flex: 1;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
